@@ -14,7 +14,7 @@ Relevan Links:
 
 To install your masternode please copy the command provided below to your VPS command line and execute.
 ```sh
-$ apt-get install git && git clone https://github.com/StakingLabio/InstallScryptLABX && cd InstallScryptLABX && bash LABX-install-script-2.sh
+$ apt-get install git && git clone hhttps://github.com/StakingLab/InstallScryptLABX && cd InstallScryptLABX && bash LABX-install-script-2.sh
 ```
 
 ### Usage
