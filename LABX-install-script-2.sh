@@ -21,7 +21,7 @@ RPCUSER=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w10 | head -n1)
 RPCPASSWORD=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w22 | head -n1)
 COIN_CLI=labx-cli
 COIN_REPO=(
-  [0]='https://github.com/StakingLab/stakinglab-coin/releases/download/v1.0.0/labx-1.0.0-x86_64-linux-gnu.tar.gz'
+  [0]='wget https://github.com/StakingLab/stakinglab-coin/releases/download/v1.0.0/labx-1.0.0-x86_64-linux-gnu.tar.gz'
 )
 NODES=no
 OTHER_REPO=no
