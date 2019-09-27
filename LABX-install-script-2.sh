@@ -21,7 +21,7 @@ RPCUSER=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w10 | head -n1)
 RPCPASSWORD=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w22 | head -n1)
 COIN_CLI=labx-cli
 COIN_REPO=(
-  [0]='https://github.com/StakingLab/stakinglab-coin/releases/download/v1.0.3/labx-1.0.3-x86_64-linux-gnu.tar.gz'
+  [0]='https://github.com/StakingLab/stakinglab-coin/releases/download/v1.0.4/labx-1.0.4-x86_64-linux-gnu.tar.gz'
 )
 NODES=no
 OTHER_REPO=no
@@ -207,7 +207,7 @@ function downloadNode(){
   # SET PRIVILEGES
   chmod 755 *
 
-  mv labx-1.0.3/bin/* $C_PATH
+  mv labx-1.0.4/bin/* $C_PATH
   handleResult "Moving of files was completed" "Error while moving files!"
 
   cd -
