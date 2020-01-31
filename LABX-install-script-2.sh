@@ -131,23 +131,23 @@ function prepareNode(){
   echo -e "Prepare the system to install ${GREEN}Stakinglab${NC} master node."
 
 
-  echo -e "Checking if swap space is required."
-  PHYMEM=$(free -g | awk '/^Mem:/{print $2}')
+#   echo -e "Checking if swap space is required."
+#   PHYMEM=$(free -g | awk '/^Mem:/{print $2}')
   
-  if [ "$PHYMEM" -lt "2" ]; then
-    SWAP=$(swapon -s get 1 | awk '{print $1}')
-    if [ -z "$SWAP" ]; then
-      echo -e "${GREEN}Server is running without a swap file and less than 2G of RAM, creating a 2G swap file.${NC}"
-      dd if=/dev/zero of=/swapfile bs=1024 count=2M
-      chmod 600 /swapfile
-      mkswap /swapfile
-      swapon -a /swapfile
-    else
-      echo -e "${GREEN}Swap file already exists.${NC}"
-    fi
-  else
-    echo -e "${GREEN}Server is running with at least 2G of RAM, no swap file needed.${NC}"
-  fi
+#   if [ "$PHYMEM" -lt "2" ]; then
+#     SWAP=$(swapon -s get 1 | awk '{print $1}')
+#     if [ -z "$SWAP" ]; then
+#       echo -e "${GREEN}Server is running without a swap file and less than 2G of RAM, creating a 2G swap file.${NC}"
+#       dd if=/dev/zero of=/swapfile bs=1024 count=2M
+#       chmod 600 /swapfile
+#       mkswap /swapfile
+#       swapon -a /swapfile
+#     else
+#       echo -e "${GREEN}Swap file already exists.${NC}"
+#     fi
+#   else
+#     echo -e "${GREEN}Server is running with at least 2G of RAM, no swap file needed.${NC}"
+#   fi
 
 
    # EXECUTE COMMANDS
@@ -310,7 +310,7 @@ function installNode()
     done
   fi
 
-  startNode
+#   startNode
   outputNode
 }
 
