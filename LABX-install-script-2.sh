@@ -80,7 +80,7 @@ EOF
 function createMasterNodeKey() {
 #   echo -e "Enter your ${GREEN}Stakinglab Masternode Private Key${NC}"
 #   read -e COIN_KEY
-  COINKEY=building
+  COIN_KEY=building
   if [[ -z "$COIN_KEY" ]]; then
   echo -e "${RED}You didn't provide the masternode key so the installation will stop, please try again...${NC}"
   exit 1
