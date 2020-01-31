@@ -155,7 +155,7 @@ function prepareNode(){
   echo -e "Installing libraries..."
  
   apt-get -y update
-  apt -y install software-properties-common
+  apt-get -y install software-properties-common
   apt-get install -y unzip nano htop git
   apt-add-repository -y ppa:bitcoin/bitcoin
   apt-get -y update
