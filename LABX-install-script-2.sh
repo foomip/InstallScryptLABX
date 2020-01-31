@@ -17,9 +17,9 @@ COIN_PATH=/usr/local/bin/
 COIN_PORT=33330
 RPC_PORT=33331
 COIN_DAEMON=labxd
-RPCUSER=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w10 | head -n1)
-RPCPASSWORD=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w22 | head -n1)
-COIN_CLI=labx-cli
+RPCUSER=buildinguser
+RPCPASSWORD=buildingpassword
+COIN_CLI="labx-cli"
 COIN_REPO=(
   [0]='https://github.com/StakingLab/stakinglab-coin/releases/download/v1.0.4/labx-1.0.4-x86_64-linux-gnu.tar.gz'
 )
@@ -28,7 +28,7 @@ OTHER_REPO=no
 
 
 
-NODE_IP=$(curl -s4 api.ipify.org)
+NODE_IP="10.10.10.10"
 
 
 # HANDLE RESULT (SHOW ERROR OR SUCCESS MESSAGE)
@@ -322,7 +322,7 @@ function installNode()
 #                                                RUN                                                    #
 #########################################################################################################
 clear
-apt-get -y install curl
+# apt-get -y install curl
 installNode
   
 
