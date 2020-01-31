@@ -223,7 +223,7 @@ function downloadNode(){
 function setupNode() {
   createMasterNodeKey
   createConfig
-  enableFirewall
+#   enableFirewall
 }
 
 
